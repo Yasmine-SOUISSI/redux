@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { changeName } from "./Redux/actions/userActions";
+import { useDispatch } from "react-redux";
+import NameValue from "./Components/nameValue";
 
 function App() {
+  const [name, setName] = useState("");
+  const handleChange = (e) => {
+    e.preventDefault();
+    setName(e.target.value);
+  };
+  console.log(name);
+  const dispatch = useDispatch();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <label>
+        Name:
+        <input type='text' name='name' onChange={handleChange} />
+      </label>
+      <input
+        type='submit'
+        value='Submit'
+        onClick={() => dispatch(changeName(name))}
+      />
+
+      <NameValue />
     </div>
   );
 }
