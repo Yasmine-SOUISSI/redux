@@ -1,30 +1,19 @@
-import React, { useState } from "react";
-import { changeName } from "./Redux/actions/userActions";
-import { useDispatch } from "react-redux";
-import NameValue from "./Components/nameValue";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import UserDetails from "./Pages/UserDetails";
+import UsersList from "./Pages/UsersList";
 
 function App() {
-  const [name, setName] = useState("");
-  const handleChange = (e) => {
-    e.preventDefault();
-    setName(e.target.value);
-  };
-  console.log(name);
-  const dispatch = useDispatch();
   return (
-    <div className='App'>
-      <label>
-        Name:
-        <input type='text' name='name' onChange={handleChange} />
-      </label>
-      <input
-        type='submit'
-        value='Submit'
-        onClick={() => dispatch(changeName(name))}
-      />
-
-      <NameValue />
-    </div>
+    <>
+      <h1>NavBar</h1>
+      <Routes>
+        <Route path='/' element={<p>Home Page</p>} />
+        <Route path='/users' element={<UsersList />} />
+        <Route path='/users/:userId' element={<UserDetails />} />
+      </Routes>
+      <h1>Footer</h1>
+    </>
   );
 }
 
