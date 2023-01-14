@@ -1,19 +1,71 @@
 {
   "users": [
     {
-      "name": "test",
-      "email": "dddd",
+      "id": 1,
+      "name": "John Doe",
+      "email": "yass@gmail.com",
+      "type": "admin",
+      "password": "1234",
+      "created_at": "2018-01-01 00:00:00",
+      "updated_at": "2018-01-01 00:00:00"
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "email": "yas@gmail.com",
+      "password": "1234",
+      "type": "user",
+      "created_at": "2018-01-01 00:00:00",
+      "updated_at": "2018-01-01 00:00:00"
+    },
+    {
+      "name": "dddd",
+      "email": "aa@gmail.com",
+      "password": "aa@gmail.com",
+      "type": "user",
+      "id": 4
+    },
+    {
+      "name": "dddd",
+      "email": "a@gmail.com",
+      "password": "aa@gmail.com",
+      "type": "user",
       "id": 5
     },
     {
-      "name": "test",
-      "email": "dddd",
+      "name": "dddd",
+      "email": "a222@gmail.com",
+      "password": "aa@gmail.com",
+      "type": "user",
       "id": 6
     },
     {
-      "name": "Islem",
-      "email": "islem@gmail.com",
+      "name": "dddd",
+      "email": "a2gmail.com",
+      "password": "aa@gmail.com",
+      "type": "user",
       "id": 7
+    },
+    {
+      "name": "dddd",
+      "email": "dd@gmail.com",
+      "password": "aa@gmail.com",
+      "type": "user",
+      "id": 8
+    },
+    {
+      "name": "dddd",
+      "email": "wwwd@gmail.com",
+      "password": "aa@gmail.com",
+      "type": "user",
+      "id": 9
+    },
+    {
+      "name": "Yasmine",
+      "email": "y@gmail.com",
+      "type": "user",
+      "password": "1234",
+      "id": 10
     }
   ]
 }

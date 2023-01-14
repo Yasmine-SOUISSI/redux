@@ -3,7 +3,7 @@ import axios from "axios";
 export const getUsers = () => async (dispatch) => {
   {
     try {
-      const response = await axios.get(" http://localhost:3000/users");
+      const response = await axios.get("http://localhost:3000/users");
       if (response.status === 200) {
         dispatch({ type: "GET_USERS", payload: response.data });
       } else {
@@ -17,7 +17,7 @@ export const getUsers = () => async (dispatch) => {
 
 export const addUser = (user) => async (dispatch) => {
   try {
-    const response = await axios.post(" http://localhost:3000/users", user);
+    const response = await axios.post("http://localhost:3000/users", user);
     if (response.status === 201) {
       dispatch({ type: "ADD_USER", payload: response.data });
     } else {
